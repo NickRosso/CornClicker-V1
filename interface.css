@@ -1,0 +1,84 @@
+.stats{
+
+	font-size: 20px;
+	font-family: arial;
+}
+
+.detailText{
+	display: inline-block;
+	text-align: center;
+	font-size: 18px;
+	width: 200px;
+	background-color: yellow;
+	border-radius: 10px;
+}
+
+
+.mainPage{
+	margin: auto;
+	width: 50%;
+	text-align: center;
+	color: yellow;
+	border: 3px solid green;
+	border-radius: 10px;
+	background: #009900;
+	padding: 10px;
+}
+
+.buyButton{
+	display: inline-block;
+	position:relative;
+	width: 200px;
+	padding: 5px;
+	background-color: #125E16;
+	border: 3px solid yellow;
+	border-radius: 10px;
+	text-align: center;
+	margin: auto;
+	font-size: 20px;
+	color: yellow;
+	text-decoration: none;
+	overflow: hidden;
+	cursor: pointer;
+
+}
+
+.buyButton:after {
+    content: "";
+    background: #20cc20;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 300%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.4s
+}
+
+.buyButton:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+table {
+	width: 100%;
+}
+
+th {
+	text-align: center;
+}
+body{
+	background-image: url("Images/background.jpg");
+	height: 100%;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+    not supported by any browser */
+
+}

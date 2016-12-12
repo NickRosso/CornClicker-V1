@@ -1,0 +1,54 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="interface.css" />
+
+</head>
+<body onload="load();">
+
+	<div class="mainPage">
+
+			<h1>Corn Clicker</h1>
+			<div class="stats" id="corn">Corn: 
+				<span id="totalCorn">0</span>
+			</div>
+		<br />
+			<a class="buyButton" onClick="cornClick(1)">Click Here!</a>
+		<br />
+		<br />
+			<div class="stats">Corn/Sec: <span id="cornPerSec">0</span></div>
+	<br />
+
+	<br />
+	<table id="gameTable">
+		<tr>
+			<th><a class="buyButton" onClick="buyItem()">Buy Hoe</a></th>
+			<th><a class="buyButton" onClick="buyFarmHand()">Buy FarmHand</a></th>
+		</tr>
+		<tr>
+			<td align="center">
+				<div class="detailText">
+				Cost: <span id="toolCost">10</span>
+				<br />
+				Tools: <span id="tools">0</span>
+				</div>
+			</td>
+			<td align="center">
+				<div class="detailText">
+				FarmHand Cost: <span id="farmHandCost">100</span>
+				<br />
+				Farmhands: <span id="farmHands">0</span>
+				</div>
+			</td>
+		</tr>
+		<br />
+	</table>
+	<a class="buyButton" onClick="deleteSave()"> Delete Save</a>
+
+
+
+	<!--Must be at bottom of body-->
+	<script type="text/javascript" src="main.js"> </script>
+</body>
+
+
+</html>
