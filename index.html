@@ -21,24 +21,59 @@
 	<br />
 	<table id="gameTable">
 		<tr>
-			<th><a class="buyButton" onClick="buyItem()">Buy Hoe</a></th>
+			<th><a class="buyButton" onClick="buyNewItem('hoes')">Buy Hoe</a></th>
 			<th><a class="buyButton" onClick="buyFarmHand()">Buy FarmHand</a></th>
 		</tr>
 		<tr>
 			<td align="center">
 				<div class="detailText">
-				Cost: <span id="toolCost">10</span>
+				Cost: <span id="hoesCost">10</span>
 				<br />
-				Tools: <span id="tools">0</span>
+				Hoes: <span id="hoes">0</span>
+				<br />
+				Effect: +1 C/S
 				</div>
 			</td>
 			<td align="center">
 				<div class="detailText">
-				FarmHand Cost: <span id="farmHandCost">100</span>
+				FarmHand Cost: <span id="farmHandCost">500</span>
 				<br />
 				Farmhands: <span id="farmHands">0</span>
+				<br />
+				Effect: x2 CS
 				</div>
 			</td>
+
+		</tr>
+		<tr>
+			<th><a class="buyButton" onClick="buyNewItem('plows')">Buy Plow</a></th>
+		</tr>
+		<tr>
+			<td align="center">
+				<div class="detailText">
+				Cost: <span id="plowsCost">500</span>
+				<br />
+				Plows: <span id="plows">0</span>
+				<br />
+				Effect: +10 C/S
+				</div>
+			</td>
+			
+		</tr>
+		<tr>
+			<th><a class="buyButton" onClick="buyNewItem('tractors')">Buy Tractor</a></th>
+		</tr>
+		<tr>
+			<td align="center">
+				<div class="detailText">
+				Cost: <span id="tractorsCost">15,000</span>
+				<br />
+				Plows: <span id="tractors">0</span>
+				<br />
+				Effect: +20 C/S
+				</div>
+			</td>
+			
 		</tr>
 		<br />
 	</table>

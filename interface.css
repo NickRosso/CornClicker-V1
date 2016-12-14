@@ -39,7 +39,6 @@
 	color: yellow;
 	text-decoration: none;
 	overflow: hidden;
-	cursor: pointer;
 
 }
 
@@ -62,6 +61,10 @@
     opacity: 1;
     transition: 0s;
 }
+.buyButton:hover{
+	background-color: green;
+
+}
 
 table {
 	width: 100%;
@@ -72,6 +75,7 @@ th {
 }
 body{
 	background-image: url("Images/background.jpg");
+	cursor: url(Images/cursor.gif), pointer;
 	height: 100%;
 	-webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Chrome/Safari/Opera */
