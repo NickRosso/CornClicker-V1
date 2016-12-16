@@ -19,7 +19,7 @@ function save(corn, hoes, plows, tractors, farmHands, harvesters,combines, alien
 };
 
 function deleteSave(){
-	localStorage.removeItem("savedValues")
+	localStorage.removeItem("savedValues");
 	corn = 0;
 	hoes = 0;
 	plows = 0;
@@ -40,22 +40,26 @@ function deleteSave(){
 function load(){
 	var savegame = JSON.parse(localStorage.getItem("savedValues"));
 
-	if(typeof savegame.corn !== "undefined") corn = savegame.corn; 
-	if(typeof savegame.hoes !== "undefined") hoes = savegame.hoes;
-	if(typeof savegame.plows !== "undefined") plows = savegame.plows;
-	if(typeof savegame.tractors !== "undefined") tractors = savegame.tractors;
-	if(typeof savegame.harvesters !== "undefined") harvesters = savegame.harvesters;
-	if(typeof savegame.combines !== "undefined") combines = savegame.combines;
-	if(typeof savegame.alienSpaceCraft !== "undefined") alienSpaceCraft = savegame.alienSpaceCraft;
-	if(typeof savegame.moonCornBases !== "undefined") moonCornBases = savegame.moonCornBases;
-	if(typeof savegame.marsCornBases !== "undefined") marsCornBases = savegame.marsCornBases;
-	if(typeof savegame.centauriBases !== "undefined") centauriBases = savegame.centauriBases;
-	if(typeof savegame.increasedHydrophonics !== "undefined") increasedHydrophonics = savegame.increasedHydrophonics;
-	if(typeof savegame.automatizedFarms !== "undefined") automatizedFarms = savegame.automatizedFarms;
-	if(typeof savegame.quantumCornManipulators !== "undefined") quantumCornManipulators = savegame.quantumCornManipulators;
-	if(typeof savegame.farmHands !== "undefined") farmHands = savegame.farmHands;
-
-
+	if(savegame == null){
+		console.log("No Save Detected");
+		deleteSave();
+		console.log("localStorage formatted");
+	}else{
+		if(typeof savegame.corn !== "undefined") corn = savegame.corn; 
+		if(typeof savegame.hoes !== "undefined") hoes = savegame.hoes;
+		if(typeof savegame.plows !== "undefined") plows = savegame.plows;
+		if(typeof savegame.tractors !== "undefined") tractors = savegame.tractors;
+		if(typeof savegame.harvesters !== "undefined") harvesters = savegame.harvesters;
+		if(typeof savegame.combines !== "undefined") combines = savegame.combines;
+		if(typeof savegame.alienSpaceCraft !== "undefined") alienSpaceCraft = savegame.alienSpaceCraft;
+		if(typeof savegame.moonCornBases !== "undefined") moonCornBases = savegame.moonCornBases;
+		if(typeof savegame.marsCornBases !== "undefined") marsCornBases = savegame.marsCornBases;
+		if(typeof savegame.centauriBases !== "undefined") centauriBases = savegame.centauriBases;
+		if(typeof savegame.increasedHydrophonics !== "undefined") increasedHydrophonics = savegame.increasedHydrophonics;
+		if(typeof savegame.automatizedFarms !== "undefined") automatizedFarms = savegame.automatizedFarms;
+		if(typeof savegame.quantumCornManipulators !== "undefined") quantumCornManipulators = savegame.quantumCornManipulators;
+		if(typeof savegame.farmHands !== "undefined") farmHands = savegame.farmHands;
+	};
 
 };
 
@@ -239,7 +243,7 @@ function updateGameElements(){
 };
 
 
-
+load();
 window.setInterval(function(){
 	cornPerSec = getCornPerSec(corn, hoes, plows, tractors, farmHands, harvesters,combines, alienSpaceCraft, moonCornBases, marsCornBases, centauriBases, increasedHydrophonics, automatizedFarms, quantumCornManipulators);
 	updateGameElements();
